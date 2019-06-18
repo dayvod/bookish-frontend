@@ -1,0 +1,33 @@
+.input {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 0.41em;
+}
+
+.label {
+  display: block;
+  font-size: 1.25rem;
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.64rem;
+}
+
+.msg {
+  display: block;
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 0.64rem;
+}
+
+.error [aria-invalid="true"] {
+  border: 3px solid #9E0000;
+}
+
+.error .msg {
+  color: #9E0000;
+}
+
+.textField {}

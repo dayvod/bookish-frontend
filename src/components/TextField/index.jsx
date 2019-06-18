@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles.css';
 
 function TextField({
   labelText,
@@ -9,16 +10,24 @@ function TextField({
   message,
   hasError,
 }) {
+  const textFieldClassName = hasError ? `${styles.textField} ${styles.error}` : styles.textField;
   return (
-    <div>
-      <label htmlFor={inputId}>{labelText}</label>
+    <div className={textFieldClassName}>
+      <label className={styles.label} htmlFor={inputId}>{labelText}</label>
       <input
+        className={styles.input}
         type={inputType}
         placeholder={placeholder}
         id={inputId}
         aria-invalid={hasError}
       />
-      <span aria-live="assertive" aria-relevant="all" data-testid="textField-message">{message}</span>
+      <span
+        className={styles.msg} 
+        aria-live="assertive"
+        aria-relevant="all"
+        data-testid="textField-message">
+        {message}
+      </span>
     </div>
   );
 }
