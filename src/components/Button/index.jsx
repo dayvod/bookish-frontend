@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './styles.scss';
 
 function Button({ text, type, onClick }) {
   return (
     /* eslint-disable react/button-has-type */
-    <button type={type} onClick={onClick}>{text}</button>
+    <button type={type} onClick={onClick} className={styles.btn}>{text}</button>
   );
 }
 
@@ -19,3 +20,5 @@ Button.propTypes = {
   text: PropTypes.string,
   onClick: PropTypes.func,
 };
+
+export default Button;

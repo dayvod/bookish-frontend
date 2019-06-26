@@ -1,0 +1,15 @@
+@import '../../sass/variables';
+
+.btn {
+  box-sizing: border-box;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+  cursor: pointer;
+  font-family: $primary-font-stack;
+  font-weight: bold;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  padding: .64rem;
+  font-size: 1rem;
+}
