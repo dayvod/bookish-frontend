@@ -1,0 +1,11 @@
+@import '../../sass/variables';
+
+.star {
+  width: 20%;
+  fill: $rating-color;
+}
+
+.rating {
+  display: flex;
+  width: 100%;
+}
