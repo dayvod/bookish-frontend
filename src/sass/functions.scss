@@ -1,0 +1,26 @@
+// When a size is inserted that is above 1, multiply the scale
+// by 1.250 s times. s being the size
+
+// when a size is inserted that is below 0, divide the base
+// by the scale, s times. S = size 
+
+@function getSize($base, $scale, $size) {
+  $font-size: $base; 
+
+  @if $size == 0 {
+    @error "Size #{$size} must be greater than or less than 0.";
+  }
+
+  @if $size <= 0 {
+    $size: abs($size);
+    @for $i from 1 through $size {
+      $font-size: $font-size / $scale;
+    }
+  } @else {
+    @for $i from 1 through $size {
+      $font-size: $font-size * $scale;
+    }
+  }
+
+  @return $font-size;
+}
