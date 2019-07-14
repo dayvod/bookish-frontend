@@ -1,0 +1,35 @@
+@import '../../sass/variables';
+@import '../../sass/functions';
+
+.author {
+  display: block;
+  font-size: getSize($base, $scale, 1);
+  font-weight: 400;
+  margin-top: getSize($base, $scale, -1);
+}
+
+.link {
+  color: $hyperlink-color; 
+}
+
+.searchResult {
+  font-family: $sans-serif;
+  width: 100%;
+}
+
+.title {
+  font-size: getSize($base, $scale, 2);
+}
+
+.rating {
+  align-items: center;
+  display: flex;
+  max-width: 200px;
+  width: 100%;
+}
+
+.score {
+  font-size: getSize($base, $scale, -1);
+  font-weight: bold;
+  margin-left: getSize($base, $scale, -1);
+}
