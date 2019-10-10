@@ -15,7 +15,7 @@
 }
 
 .msg {
-  display: block;
+  display: none;
   font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   font-weight: bold;

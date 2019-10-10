@@ -9,26 +9,34 @@ function TextField({
   placeholder,
   message,
   hasError,
+  hasLabel,
 }) {
-  const textFieldClassName = hasError ? `${styles.textField} ${styles.error}` : styles.textField;
+  const inputClassNames = hasError ? `${styles.input} ${styles.error}` : styles.input;
+  const msgClassNames = hasError ? `${styles.msg} ${styles.error}` : styles.msg;
+  const label = hasLabel
+    ? <label className={styles.label} htmlFor={inputId}>{labelText}</label>
+    : null;
+
   return (
-    <div className={textFieldClassName}>
-      <label className={styles.label} htmlFor={inputId}>{labelText}</label>
+    <React.Fragment>
+      {label}
       <input
-        className={styles.input}
+        className={inputClassNames}
         type={inputType}
         placeholder={placeholder}
         id={inputId}
         aria-invalid={hasError}
+        aria-label={hasLabel ? null : labelText}
       />
       <span
-        className={styles.msg} 
+        className={msgClassNames}
         aria-live="assertive"
         aria-relevant="all"
-        data-testid="textField-message">
+        data-testid="textField-message"
+      >
         {message}
       </span>
-    </div>
+    </React.Fragment>
   );
 }
 
@@ -37,6 +45,7 @@ TextField.defaultProps = {
   placeholder: '',
   message: '',
   hasError: false,
+  hasLabel: true,
 };
 
 TextField.propTypes = {
@@ -46,6 +55,7 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   message: PropTypes.string,
   hasError: PropTypes.bool,
+  hasLabel: PropTypes.bool,
 };
 
 export default TextField;

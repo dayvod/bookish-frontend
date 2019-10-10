@@ -15,6 +15,7 @@
 .searchResult {
   font-family: $sans-serif;
   width: 100%;
+  margin-bottom: getSize($base, $scale, 8);
 }
 
 .title {
