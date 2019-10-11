@@ -1,3 +1,4 @@
+@import './variables';
 // When a size is inserted that is above 1, multiply the scale
 // by 1.250 s times. s being the size
 
@@ -23,4 +24,8 @@
   }
 
   @return $font-size;
+}
+
+@function columnSize($cols) {
+  @return $cols / $max-col-count * 100%;
 }

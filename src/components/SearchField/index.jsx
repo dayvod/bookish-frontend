@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '../TextField';
 import Button from '../Button';
 import styles from './styles.scss';
+import SearchIcon from '../Svg/SearchIcon';
 
 function SearchField() {
   return (
@@ -15,7 +16,7 @@ function SearchField() {
         hasError={false}
       />
       <Button
-        text="search"
+        text={<SearchIcon className={styles.searchField__icon} />}
         type="button"
       />
     </section>
