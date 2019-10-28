@@ -2,27 +2,33 @@
 @import '../../sass/functions';
 
 .searchField {
-  flex-wrap: wrap;
-  display: flex;
+  position: relative;
   width: 100%;
 }
 
-.searchField > label {
-  font-size: getSize($base, $scale, 3);
-  width: 100%;
-}
-
-.searchField > input {
-  flex-grow: 2;
-  width: 75%;
-}
-
-.searchField > button {
+.searchField__btn {
+  position: absolute;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   max-width: 50px;
-  width: 20%;
 }
 
 .searchField__icon {
-  max-width: 20px;
   fill: #ffffff;
+  width: 100%;
+  max-width: 17.5px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.searchField__input {
+  box-sizing: border-box;
+  border: 0;
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 0.41em;
 }

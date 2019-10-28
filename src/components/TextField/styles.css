@@ -1,6 +1,6 @@
 .input {
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 0;
   font-size: 1.25rem;
   width: 100%;
   padding: 0.41em;
@@ -28,4 +28,10 @@
 
 .error .msg {
   color: #9E0000;
+}
+
+.hideVisually {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
 }

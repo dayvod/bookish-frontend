@@ -5,11 +5,12 @@ import styles from './styles.scss';
 function Button({
   text, type, className, onClick,
 }) {
-  const buttonClassName = className || styles.btn;
-
   return (
-    /* eslint-disable react/button-has-type */
-    <button type={type} onClick={onClick} className={buttonClassName}>
+    <button
+      type="button"
+      onClick={onClick}
+      className={`${styles.btn} ${className || ''}`}
+    >
       {text}
     </button>
   );

@@ -1,0 +1,23 @@
+@import '../../sass/variables';
+@import '../../sass/functions';
+
+.nav {
+  padding: getSize($base, $scale, -2);
+  background-color: $secondary-color;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.nav__logo {
+  max-width: 150px;
+  width: 100%;
+  margin-bottom: getSize($base, $scale, -1);
+  margin-top: getSize($base, $scale, -1);
+}
+
+@media (min-width: 550px) {
+  .nav__searchField {
+    // max-width: 250px;
+  }
+}

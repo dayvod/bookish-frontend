@@ -13,13 +13,16 @@ function TextField({
 }) {
   const inputClassNames = hasError ? `${styles.input} ${styles.error}` : styles.input;
   const msgClassNames = hasError ? `${styles.msg} ${styles.error}` : styles.msg;
-  const label = hasLabel
-    ? <label className={styles.label} htmlFor={inputId}>{labelText}</label>
-    : null;
+
 
   return (
     <React.Fragment>
-      {label}
+      <label
+        className={hasLabel ? styles.label : styles.hideVisually}
+        htmlFor={inputId}
+      >
+        {labelText}
+      </label>
       <input
         className={inputClassNames}
         type={inputType}
